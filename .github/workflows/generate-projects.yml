@@ -1,8 +1,6 @@
 name: Generate GitHub Projects Data
 
 on:
-  schedule:
-    - cron: '0 0 * * *' # Daily
   workflow_dispatch:
   push:
     branches: [main]
