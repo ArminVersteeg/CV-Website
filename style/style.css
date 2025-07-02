@@ -1,0 +1,83 @@
+body {
+  font-family: "Segoe UI", sans-serif;
+  background-color: black;
+  color: white;
+  font-family: "Roboto Mono", monospace;
+  letter-spacing: 0.1rem;
+}
+
+.header-wrapper {
+  background-color: #101010;
+  border: 1px solid  #434343;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.page-wrapper {
+  max-width: 850px;
+}
+
+.custom-button {
+  background-color: #101010;
+  border: 1px solid  #434343;
+  color: white;
+  text-align: left;
+}
+
+.custom-button:hover {
+  background-color: #1a1a1a;
+  border: 1px solid  #434343;
+}
+
+.header-icon {
+  filter: invert(1) brightness(0.7) contrast(0.8);
+}
+
+.white-icon {
+  filter: invert(1);
+}
+
+/* Other */
+.profile-picture {
+  border-radius: 50%;
+}
+
+.profile-picture:hover {
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.my-name {
+  font-size: 39px;
+}
+
+.current-position { 
+  font-size: 23px;
+}
+
+/* Typewriter Style */
+.typewriter {
+  display: inline-block;
+  width: auto;
+  height: 1.2rem;
+  overflow: hidden;
+  border-right: 2px solid white;
+  line-height: 20px;
+}
+
+[data-typewriter]:not(.typing) {
+  animation: blink-caret 1.1s step-end infinite;
+}
+
+@keyframes blink-caret {
+  0%,
+  100% {
+    border-color: transparent;
+  }
+
+  50% {
+    border-color: white;
+  }
+}
