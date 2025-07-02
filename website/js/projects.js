@@ -9,7 +9,7 @@ fetch('data/projects.json')
 
             const item = document.createElement("div");
             item.innerHTML = `
-            <a href="${repo.html_url}" target="_blank" class="project btn mb-2 text-decoration-none">
+            <a href="${repo.html_url}" target="_blank" class="project btn mb-3 text-decoration-none">
                 <div class="d-flex justify-content-between">
                     <div class="d-flex align-items-left">
                         <img class="white-icon me-2 mb-1 rotate-hover" src="icons/arrow.svg" alt="GoTo" width="28" /> 
