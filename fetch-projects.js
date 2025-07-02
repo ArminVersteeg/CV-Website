@@ -33,7 +33,6 @@ async function fetchRepos() {
         });
     }
 
-    // Save to public/projects.json
     fs.mkdirSync('website/data', { recursive: true });
     fs.writeFileSync('website/data/projects.json', JSON.stringify(results, null, 2));
 }

@@ -35,6 +35,6 @@ jobs:
         run: |
           git config user.name "GitHub Action"
           git config user.email "actions@github.com"
-          git add public/projects.json
+          git add website/data/projects.json
           git commit -m "Update projects.json"
           git push
