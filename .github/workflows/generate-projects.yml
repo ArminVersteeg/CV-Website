@@ -1,0 +1,35 @@
+name: Generate GitHub Projects Data
+
+on:
+  schedule:
+    - cron: '0 0 * * *' # Daily
+  workflow_dispatch:
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Generate projects.json
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+        run: node fetch-projects.js
+
+      - name: Commit updated projects.json
+        run: |
+          git config user.name "GitHub Action"
+          git config user.email "actions@github.com"
+          git add public/projects.json
+          git commit -m "Update projects.json"
+          git push

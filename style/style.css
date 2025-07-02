@@ -6,6 +6,12 @@ body {
   letter-spacing: 0.1rem;
 }
 
+@media (min-width: 1400px) {
+  header {
+    max-width: 1140px !important;
+  }
+}
+
 .header-wrapper {
   background-color: #101010;
   border: 1px solid  #434343;
@@ -19,17 +25,19 @@ a:hover {
   max-width: 850px;
 }
 
-.custom-button {
+.custom-button, .project {
   background-color: #101010;
   border: 1px solid  #434343;
   color: white;
   text-align: left;
 }
 
-.custom-button:hover {
+.custom-button:hover, .project:hover {
   background-color: #1a1a1a;
   border: 1px solid  #434343;
 }
+
+
 
 .header-icon {
   filter: invert(1) brightness(0.7) contrast(0.8);
@@ -42,6 +50,7 @@ a:hover {
 /* Other */
 .profile-picture {
   border-radius: 50%;
+  transition: all 0.2s ease;
 }
 
 .profile-picture:hover {
@@ -80,4 +89,18 @@ a:hover {
   50% {
     border-color: white;
   }
+}
+
+/* Projects */
+.project {
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.project:hover .rotate-hover {
+  transform: rotate(-40deg);
+}
+
+.rotate-hover {
+  transition: transform 0.3s ease;
 }
