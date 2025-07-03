@@ -25,7 +25,7 @@ CV-Website/
 ├── website/
 │   ├── index.html
 │   ├── js/
-│   ├── css/
+│   ├── style/
 │   ├── images/
 │   ├── icons/
 │   └── data/
