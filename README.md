@@ -39,25 +39,6 @@ CV-Website/
 
 ---
 
-## Setup & Deployment
-
-### Local Development
-
-1. Clone the repo
-
-   ```bash
-   git clone https://github.com/ArminVersteeg/CV-Website.git
-   cd CV-Website/website
-   ```
-
-2. Open `index.html` in your browser or use a live server extension for development.
-
-3. To update projects data locally, run the Node.js script:
-
-   ```bash
-   GH_TOKEN=your_personal_access_token node fetch-projects.js
-   ```
-
 ## GitHub Actions
 
 - Automatically fetches and updates `projects.json` on the click of a button.
@@ -71,7 +52,6 @@ CV-Website/
 - HTML5, CSS3, JavaScript (ES6+)
 - Bootstrap 5 for styling and layout
 - GitHub REST API for repository data
-- Node.js for data fetching script
 - GitHub Actions for automation
 
 ---
