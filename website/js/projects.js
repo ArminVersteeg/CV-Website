@@ -3,7 +3,11 @@ const container = document.getElementById("projects");
 fetch('data/projects.json')
     .then(res => res.json())
     .then(repos => {
-        repos.forEach(repo => {
+        // Sort by date created (New > Old)
+        repos.sort((a, b) => new Date(b.created_at) - new Date(a.created_at));
+
+        // Take only the 4 most recent repos
+        repos.slice(0, 4).forEach(repo => {
             const createdYear = new Date(repo.created_at).getFullYear();
             const topics = repo.topics || [];
 
